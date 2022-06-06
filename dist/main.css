@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-background:#4C3575;
+  --color-cards:#000000;
+  --color-border:#371B58;
+  --color-title:rgb(255, 0, 0);
+  --color-subtitle:rgb(0, 0, 255);
+}
+
+video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
+
+body {
+  height: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 60%;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#me {
+  color: yellow;
+}
+
+#proyects {
+  color: red;
+}
+
+#contact {
+  color: blue;
+}
+
+.cardContainer {
+  margin: 10% 20% 20% 20%;
+}
+
+.card, .cardProyect {
+  background-color: var(--color-cards);
+  opacity: 0.9;
+  border: solid;
+  border-color: var(--color-border);
+  border-radius: 4%;
+  box-shadow: 10px 5px 5px #371B58;
+}
+
+.titleContainer {
+  display: flex;
+  margin: 30px 20px 20px 30px;
+  justify-content: space-around;
+}
+
+.photo, .icon {
+  border-radius: 10%;
+  width: auto;
+  height: 90px;
+}
+
+.title {
+  color: var(--color-title);
+  height: 100%;
+  width: 100%;
+}
+
+.subtitle, .textInfo, .subtitleProyect, .textInfoProyect {
+  color: var(--color-subtitle);
+  text-align: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+
+.textInfo {
+  margin-bottom: 50px;
+}
+
+#titleProyect {
+  color: yellow;
+  display: flex;
+  justify-content: center;
+}
+
+.cardProyect {
+  width: 300px;
+  margin-left: 30%;
+}
+
+.infoProyect {
+  margin-top: 3rem;
+}
+
+.photoProyect {
+  height: 150px;
+  width: 100%;
+  border-radius: 4%;
+}
+
+.title {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cardContainerProyect {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+    column-gap: 20%;
+    margin: 10% 20% 20% 20%;
+    justify-content: space-around;
+  }
+
+  .cardProyect {
+    margin-left: auto;
+    height: 410px;
+  }
+
+  .infoProyect {
+    margin-bottom: 2rem;
+  }
+}
+.cardContact {
+  height: 6rem;
+  width: 50%;
+  border: solid;
+  border-color: var(--color-border);
+  background-color: var(--color-cards);
+  opacity: 0.9;
+  margin: 5% 5% 5% 25%;
+  border-radius: 4%;
+  box-shadow: 10px 5px 5px #371B58;
+}
+
+.titleContainerContact {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cardProyect:hover, .cardContact:hover {
+  padding: 10px;
+  opacity: 1;
+  transition: 0.3s;
+}
